@@ -22,16 +22,18 @@ export const Contact: React.FC = () => {
             </Reveal>
             <Reveal delay={0.2}>
               <a 
-                href="mailto:hello@alex.dev" 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=gastonvigabriel7@gmail.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-2xl font-medium hover:text-accent transition-colors mb-12"
               >
-                <Mail /> hello@ema.dev
+                <Mail /> gastonvigabriel7@gmail.com
               </a>
             </Reveal>
 
             <Reveal delay={0.3}>
               <div className="flex gap-6">
-                <a href="#" className="p-3 bg-neutral-800 dark:bg-neutral-900 rounded-full hover:bg-accent hover:text-white transition-colors">
+                <a href="https://github.com/Gastonviga" className="p-3 bg-neutral-800 dark:bg-neutral-900 rounded-full hover:bg-accent hover:text-white transition-colors">
                   <Github size={24} />
                 </a>
                 <a href="#" className="p-3 bg-neutral-800 dark:bg-neutral-900 rounded-full hover:bg-accent hover:text-white transition-colors">
@@ -45,13 +47,15 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="bg-neutral-800/50 dark:bg-neutral-900/50 p-8 rounded-2xl border border-neutral-700/50">
-             <form className="space-y-6">
+             <form action="https://formspree.io/f/xqekvyqe" method="POST" className="space-y-6">
                <Reveal>
                  <div className="flex flex-col gap-2">
                    <label htmlFor="name" className="text-sm font-medium text-neutral-400">Name</label>
                    <input 
                     type="text" 
                     id="name" 
+                    name="name"
+                    required
                     className="bg-neutral-900 dark:bg-neutral-950 border border-neutral-700 rounded-lg p-3 text-white focus:outline-none focus:border-accent transition-colors"
                     placeholder="John Doe"
                    />
@@ -63,6 +67,8 @@ export const Contact: React.FC = () => {
                    <input 
                     type="email" 
                     id="email" 
+                    name="email"
+                    required
                     className="bg-neutral-900 dark:bg-neutral-950 border border-neutral-700 rounded-lg p-3 text-white focus:outline-none focus:border-accent transition-colors"
                     placeholder="john@example.com"
                    />
@@ -73,7 +79,9 @@ export const Contact: React.FC = () => {
                    <label htmlFor="message" className="text-sm font-medium text-neutral-400">Message</label>
                    <textarea 
                     id="message" 
+                    name="message"
                     rows={4} 
+                    required
                     className="bg-neutral-900 dark:bg-neutral-950 border border-neutral-700 rounded-lg p-3 text-white focus:outline-none focus:border-accent transition-colors"
                     placeholder="Tell me about your project..."
                    />

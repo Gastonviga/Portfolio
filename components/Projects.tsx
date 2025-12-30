@@ -9,7 +9,7 @@ const projects: ProjectItem[] = [
     title: "E-Commerce Dashboard",
     category: "Analytics / React",
     description: "A comprehensive dashboard for tracking sales and inventory with real-time data visualization.",
-    imageUrl: "https://picsum.photos/seed/dashboard_tech/800/600",
+    imageUrl: "/imagenes/E-Commerce.png",
     size: "large"
   },
   {
@@ -17,15 +17,15 @@ const projects: ProjectItem[] = [
     title: "Finance App",
     category: "Mobile / React Native",
     description: "Personal finance tracking with AI insights.",
-    imageUrl: "https://picsum.photos/id/20/600/600",
+    imageUrl: "/imagenes/App-Finance.png",
     size: "small"
   },
   {
     id: 3,
-    title: "Architect Portfolio",
-    category: "Web / Design",
-    description: "Minimalist portfolio for a top architecture firm.",
-    imageUrl: "https://picsum.photos/id/48/600/600",
+    title: "Retail AI Agent",
+    category: "Automation / WhatsApp API",
+    description: "Autonomous customer service agent integrated with Google Sheets. Handles real-time stock queries and human-handoff logic, reducing response time by 90%.",
+    imageUrl: "https://picsum.photos/seed/ai_agent/600/600",
     size: "small"
   },
   {

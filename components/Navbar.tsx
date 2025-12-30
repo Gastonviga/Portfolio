@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 
 const navLinks = [
@@ -6,6 +6,7 @@ const navLinks = [
   { name: 'Experience', href: '#experience' },
   { name: 'Work', href: '#work' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Resume', href: '/cv.pdf' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -14,8 +15,14 @@ export const Navbar: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  const lastScrollTime = useRef(0);
+
   useEffect(() => {
     const handleScroll = () => {
+      const now = Date.now();
+      if (now - lastScrollTime.current < 100) return; // Throttle: 100ms
+      lastScrollTime.current = now;
+
       const scrollY = window.scrollY;
       setScrolled(scrollY > 50);
 
@@ -75,6 +82,12 @@ export const Navbar: React.FC = () => {
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Allow external links (like /cv.pdf) to work normally
+    if (!href.startsWith('#')) {
+      setIsOpen(false);
+      return;
+    }
+
     e.preventDefault();
     setIsOpen(false);
     
