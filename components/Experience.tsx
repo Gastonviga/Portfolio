@@ -5,24 +5,24 @@ import { ExperienceItem } from '../types';
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: "Senior Frontend Engineer",
+    role: "Senior Software Engineer",
     company: "TechNova Inc.",
     period: "2021 - Present",
-    description: "Leading the design system migration to React 18 and Tailwind. Improved site performance scores by 40%."
+    description: "Architecting scalable web solutions and integrating AI-driven microservices. Reduced system latency by 40% through optimized data pipelines."
   },
   {
     id: 2,
-    role: "UI/UX Developer",
+    role: "Full Stack Developer",
     company: "Creative Studio",
     period: "2019 - 2021",
-    description: "Collaborated with designers to implement award-winning websites for high-profile clients using WebGL."
+    description: "Developed end-to-end e-commerce platforms with real-time inventory management and payment gateway integrations."
   },
   {
     id: 3,
-    role: "Frontend Developer",
+    role: "Solution Developer",
     company: "StartUp Alpha",
     period: "2017 - 2019",
-    description: "Developed the MVP of a SaaS platform that was acquired by a major competitor."
+    description: "Built MVPs for high-growth startups, focusing on rapid deployment, API design, and cloud infrastructure."
   }
 ];
 

@@ -3,6 +3,7 @@ import { Reveal } from './Reveal';
 import { SkillItem } from '../types';
 
 const skills: SkillItem[] = [
+  { category: "AI & Automation", technologies: ["Python", "LangChain", "OpenAI API", "n8n", "Docker"] },
   { category: "Frontend", technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Three.js"] },
   { category: "Backend", technologies: ["Node.js", "PostgreSQL", "GraphQL", "Python"] },
   { category: "Design", technologies: ["Figma", "Adobe XD", "Blender", "UI/UX Principles"] },
@@ -19,15 +20,15 @@ export const About: React.FC = () => {
             <Reveal>
               <h3 className="text-sm font-bold text-neutral-400 dark:text-neutral-500 tracking-widest uppercase mb-2">About Me</h3>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-neutral-900 dark:text-white transition-colors">
-                Bridging the gap between design and engineering.
+                Bridging the gap between Business Logic and Artificial Intelligence.
               </h2>
             </Reveal>
             
             <Reveal delay={0.1}>
               <div className="text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-4 transition-colors">
                 <p>
-                  I am an award-winning developer with over 5 years of experience building digital products for startups and enterprise clients.
-                  My philosophy is simple: <strong>Less is more</strong>. I believe in stripping away the unnecessary to reveal the essential.
+                  I am a Solutions Architect with a background in Full Stack Engineering.
+                  My philosophy is simple: <strong>Efficiency through Automation</strong>. I build systems that don't just look good, but think for themselves.
                 </p>
                 <p>
                   Currently based in New York, helping companies scale their frontend architecture while maintaining top-tier design standards.

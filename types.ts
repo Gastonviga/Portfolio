@@ -14,6 +14,7 @@ export interface ProjectItem {
   imageUrl: string;
   size: 'small' | 'large'; // For Bento Grid
   link?: string;
+  videoUrl?: string;
 }
 
 export interface SkillItem {
