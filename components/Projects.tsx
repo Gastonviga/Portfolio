@@ -35,8 +35,9 @@ const projects: ProjectItem[] = [
     title: "Industrial IoT Hub",
     category: "IoT / MQTT / React",
     description: "Real-time visualization platform for industrial sensors. Processes high-frequency telemetry data via WebSockets for predictive maintenance.",
-    imageUrl: "https://picsum.photos/id/60/800/600",
-    size: "large"
+    imageUrl: "/imagenes/aot-hub.png",
+    size: "large",
+    videoUrl: "/videos/iot-hub-demo.mp4"
   }
 ];
 
