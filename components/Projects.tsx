@@ -18,8 +18,9 @@ const projects: ProjectItem[] = [
     title: "Headless E-Commerce",
     category: "Microservices / Next.js",
     description: "Scalable e-commerce architecture featuring a separate Admin Dashboard, real-time inventory sync, and AI-driven sales analytics.",
-    imageUrl: "/imagenes/E-Commerce.png",
-    size: "small"
+    imageUrl: "/imagenes/commerce.png",
+    size: "small",
+    videoUrl: "/videos/e-commerce.mp4"
   },
   {
     id: 3,
