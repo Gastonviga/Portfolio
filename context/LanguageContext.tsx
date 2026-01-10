@@ -112,30 +112,30 @@ export const translations: Translations = {
   'lang.switch': { en: 'Cambiar a Español', es: 'Switch to English' },
 
   // Odontologia Landing - Hero
-  'odonto.hero.title1': { en: 'Your Dental Practice', es: 'Tu Consultorio Odontológico' },
-  'odonto.hero.title2': { en: 'Deserves a Modern', es: 'Merece una Presencia' },
-  'odonto.hero.title3': { en: 'Online Presence', es: 'Digital Moderna' },
+  'odonto.hero.title1': { en: 'A Modern Landing Page', es: 'Una Landing Moderna' },
+  'odonto.hero.title2': { en: 'for Your', es: 'para Tu' },
+  'odonto.hero.title3': { en: 'Dental Practice', es: 'Consultorio Odontológico' },
   'odonto.hero.description': { 
-    en: 'A professional landing page designed to make it easy for your patients to find you and book appointments via WhatsApp.', 
-    es: 'Una landing profesional diseñada para que tus pacientes te encuentren fácilmente y reserven turnos por WhatsApp.' 
+    en: 'Help your patients find you and book appointments easily. A clean, professional landing page with direct WhatsApp contact.', 
+    es: 'Ayudá a tus pacientes a encontrarte y reservar turnos fácilmente. Una landing limpia y profesional con contacto directo por WhatsApp.' 
   },
   'odonto.hero.cta': { en: 'Chat on WhatsApp', es: 'Hablar por WhatsApp' },
   'odonto.hero.badge': { en: 'For Dental Clinics', es: 'Para Consultorios Odontológicos' },
 
   // Odontologia - Problem
   'odonto.problem.label': { en: 'The Challenge', es: 'El Desafío' },
-  'odonto.problem.title': { en: 'Booking Appointments Shouldn\'t Be Complicated', es: 'Reservar un Turno No Debería Ser Complicado' },
+  'odonto.problem.title': { en: 'Booking Should Be Simple', es: 'Reservar Debería Ser Simple' },
   'odonto.problem.description': { 
-    en: 'Many dental practices have outdated websites or unclear contact information. Patients want a simple, fast way to reach you. A modern landing page with WhatsApp integration removes friction and improves the patient experience.', 
-    es: 'Muchos consultorios tienen sitios web desactualizados o información de contacto poco clara. Los pacientes quieren una forma simple y rápida de comunicarse. Una landing moderna con integración a WhatsApp elimina fricciones y mejora la experiencia del paciente.' 
+    en: 'Outdated websites and unclear contact info create friction. Patients want a fast, simple way to reach you. A modern landing page with WhatsApp makes booking effortless.', 
+    es: 'Sitios desactualizados e información poco clara generan fricción. Los pacientes quieren una forma rápida y simple de contactarte. Una landing moderna con WhatsApp hace que reservar sea fácil.' 
   },
 
   // Odontologia - Solution
-  'odonto.solution.label': { en: 'The Solution', es: 'La Solución' },
-  'odonto.solution.title': { en: 'A Professional Landing Page', es: 'Una Landing Profesional' },
+  'odonto.solution.label': { en: 'What You Get', es: 'Qué Obtenés' },
+  'odonto.solution.title': { en: 'Clean, Professional, Effective', es: 'Limpia, Profesional, Efectiva' },
   'odonto.solution.description': { 
-    en: 'We create a clean, modern landing page for your practice. Patients can quickly see your services, location, and contact you directly via WhatsApp to book appointments.', 
-    es: 'Creamos una landing limpia y moderna para tu consultorio. Los pacientes pueden ver rápidamente tus servicios, ubicación y contactarte directamente por WhatsApp para reservar turnos.' 
+    en: 'A modern landing page designed for your patients. Services, location, and direct WhatsApp contact in one place.', 
+    es: 'Una landing moderna diseñada para tus pacientes. Servicios, ubicación y contacto directo por WhatsApp en un solo lugar.' 
   },
   'odonto.solution.feature1.title': { en: 'Responsive Design', es: 'Diseño Responsivo' },
   'odonto.solution.feature1.description': { en: 'Looks perfect on any device', es: 'Se ve perfecto en cualquier dispositivo' },
@@ -146,34 +146,44 @@ export const translations: Translations = {
 
   // Odontologia - Process
   'odonto.process.label': { en: 'How It Works', es: 'Cómo Funciona' },
-  'odonto.process.title': { en: 'Simple Booking Process', es: 'Proceso de Reserva Simple' },
+  'odonto.process.title': { en: 'Three Simple Steps', es: 'Tres Pasos Simples' },
   'odonto.process.description': { 
-    en: 'Your patients can book appointments in just a few clicks.', 
-    es: 'Tus pacientes pueden reservar turnos en pocos clics.' 
+    en: 'Booking takes seconds.', 
+    es: 'Reservar toma segundos.' 
   },
-  'odonto.process.step1.title': { en: 'Patient Fills Form', es: 'El Paciente Completa el Formulario' },
-  'odonto.process.step1.description': { en: 'They enter their name, contact info, and preferred date.', es: 'Ingresa su nombre, contacto y fecha preferida.' },
-  'odonto.process.step2.title': { en: 'WhatsApp Opens', es: 'Se Abre WhatsApp' },
-  'odonto.process.step2.description': { en: 'A pre-filled message opens in WhatsApp automatically.', es: 'Un mensaje pre-cargado se abre automáticamente en WhatsApp.' },
-  'odonto.process.step3.title': { en: 'You Confirm', es: 'Vos Confirmás' },
-  'odonto.process.step3.description': { en: 'You receive the request and confirm the appointment manually.', es: 'Recibís la solicitud y confirmás el turno manualmente.' },
+  'odonto.process.step1.title': { en: 'Fill the Form', es: 'Completar Formulario' },
+  'odonto.process.step1.description': { en: 'Name, contact, and preferred date.', es: 'Nombre, contacto y fecha preferida.' },
+  'odonto.process.step2.title': { en: 'WhatsApp Opens', es: 'WhatsApp se Abre' },
+  'odonto.process.step2.description': { en: 'Pre-filled message ready to send.', es: 'Mensaje pre-cargado listo para enviar.' },
+  'odonto.process.step3.title': { en: 'You Confirm', es: 'Confirmás' },
+  'odonto.process.step3.description': { en: 'Receive and confirm manually.', es: 'Recibís y confirmás manualmente.' },
 
   // Odontologia - Benefits
   'odonto.benefits.label': { en: 'Benefits', es: 'Beneficios' },
-  'odonto.benefits.title': { en: 'Why This Works', es: 'Por Qué Funciona' },
-  'odonto.benefits.benefit1.title': { en: 'Better Patient Experience', es: 'Mejor Experiencia para el Paciente' },
-  'odonto.benefits.benefit1.description': { en: 'Fast, clear, and easy to use from any device.', es: 'Rápido, claro y fácil de usar desde cualquier dispositivo.' },
-  'odonto.benefits.benefit2.title': { en: 'Less Friction', es: 'Menos Fricción' },
-  'odonto.benefits.benefit2.description': { en: 'No phone calls during busy hours. Patients reach you instantly.', es: 'Sin llamadas en horarios ocupados. Los pacientes te contactan al instante.' },
-  'odonto.benefits.benefit3.title': { en: 'Modern Image', es: 'Imagen Moderna' },
-  'odonto.benefits.benefit3.description': { en: 'A professional online presence that builds trust.', es: 'Una presencia digital profesional que genera confianza.' },
+  'odonto.benefits.title': { en: 'Built for Your Patients', es: 'Pensada para Tus Pacientes' },
+  'odonto.benefits.benefit1.title': { en: 'Easy to Use', es: 'Fácil de Usar' },
+  'odonto.benefits.benefit1.description': { en: 'Works perfectly on any device. No apps, no complications.', es: 'Funciona perfecto en cualquier dispositivo. Sin apps, sin complicaciones.' },
+  'odonto.benefits.benefit2.title': { en: 'Instant Contact', es: 'Contacto Instantáneo' },
+  'odonto.benefits.benefit2.description': { en: 'Patients reach you via WhatsApp. No waiting, no phone tag.', es: 'Los pacientes te contactan por WhatsApp. Sin esperas, sin vueltas.' },
+  'odonto.benefits.benefit3.title': { en: 'Professional Image', es: 'Imagen Profesional' },
+  'odonto.benefits.benefit3.description': { en: 'A clean, modern presence that builds trust from the first visit.', es: 'Una presencia limpia y moderna que genera confianza desde la primera visita.' },
+
+  // Odontologia - Demo
+  'odonto.demo.label': { en: 'See It in Action', es: 'Mirala en Acción' },
+  'odonto.demo.title': { en: 'Live Preview', es: 'Vista Previa' },
+  'odonto.demo.description': { 
+    en: 'See how your landing page could look. Clean, modern, and ready to convert visits into appointments.', 
+    es: 'Mirá cómo podría verse tu landing. Limpia, moderna y lista para convertir visitas en turnos.' 
+  },
+  'odonto.demo.button': { en: 'View Full Demo', es: 'Ver Demo Completa' },
+  'odonto.demo.hover': { en: 'Hover to preview', es: 'Hover para previsualizar' },
 
   // Odontologia - CTA Final
-  'odonto.cta.label': { en: 'Ready to Get Started?', es: '¿Listo para Empezar?' },
-  'odonto.cta.title': { en: 'Let\'s Talk About Your Practice', es: 'Hablemos Sobre Tu Consultorio' },
+  'odonto.cta.label': { en: 'Ready?', es: '¿Listo?' },
+  'odonto.cta.title': { en: 'Let\'s Build Your Landing', es: 'Creemos Tu Landing' },
   'odonto.cta.description': { 
-    en: 'Tell us about your practice and we\'ll show you how a modern landing page can help you connect with more patients.', 
-    es: 'Contanos sobre tu consultorio y te mostramos cómo una landing moderna puede ayudarte a conectar con más pacientes.' 
+    en: 'Tell us about your practice. We\'ll show you how a modern landing can help.', 
+    es: 'Contanos sobre tu consultorio. Te mostramos cómo una landing moderna puede ayudar.' 
   },
   'odonto.cta.button': { en: 'Chat on WhatsApp', es: 'Hablar por WhatsApp' },
 };

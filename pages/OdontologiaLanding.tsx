@@ -4,6 +4,7 @@ import { OdontologiaProblem } from '../components/odontologia/OdontologiaProblem
 import { OdontologiaSolution } from '../components/odontologia/OdontologiaSolution';
 import { OdontologiaProcess } from '../components/odontologia/OdontologiaProcess';
 import { OdontologiaBenefits } from '../components/odontologia/OdontologiaBenefits';
+import { OdontologiaDemo } from '../components/odontologia/OdontologiaDemo';
 import { OdontologiaCTA } from '../components/odontologia/OdontologiaCTA';
 
 export const OdontologiaLanding: React.FC = () => {
@@ -18,6 +19,7 @@ export const OdontologiaLanding: React.FC = () => {
         <OdontologiaSolution />
         <OdontologiaProcess />
         <OdontologiaBenefits />
+        <OdontologiaDemo />
         <OdontologiaCTA />
       </main>
     </div>
