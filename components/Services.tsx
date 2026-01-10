@@ -1,6 +1,6 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-import { Code2, Palette, Cloud } from 'lucide-react';
+import { Globe, MessageSquare } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface ServicePillarConfig {
@@ -13,25 +13,18 @@ interface ServicePillarConfig {
 
 const servicePillarsConfig: ServicePillarConfig[] = [
   {
-    icon: <Code2 size={32} />,
+    icon: <Globe size={32} />,
     titleKey: "services.pillar1.title",
     descriptionKey: "services.pillar1.description",
     featureKeys: ["services.pillar1.f1", "services.pillar1.f2", "services.pillar1.f3", "services.pillar1.f4"],
-    accentColor: "from-blue-500/20 to-transparent"
+    accentColor: "from-neutral-500/20 to-transparent"
   },
   {
-    icon: <Palette size={32} />,
+    icon: <MessageSquare size={32} />,
     titleKey: "services.pillar2.title",
     descriptionKey: "services.pillar2.description",
     featureKeys: ["services.pillar2.f1", "services.pillar2.f2", "services.pillar2.f3", "services.pillar2.f4"],
-    accentColor: "from-purple-500/20 to-transparent"
-  },
-  {
-    icon: <Cloud size={32} />,
-    titleKey: "services.pillar3.title",
-    descriptionKey: "services.pillar3.description",
-    featureKeys: ["services.pillar3.f1", "services.pillar3.f2", "services.pillar3.f3", "services.pillar3.f4"],
-    accentColor: "from-emerald-500/20 to-transparent"
+    accentColor: "from-neutral-500/20 to-transparent"
   }
 ];
 
@@ -55,7 +48,7 @@ export const Services: React.FC = () => {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {servicePillarsConfig.map((pillar, index) => (
             <Reveal key={pillar.titleKey} delay={index * 0.1}>
               <div className="group relative h-full glass rounded-2xl p-8 spotlight-card overflow-hidden">

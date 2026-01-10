@@ -2,8 +2,9 @@ import React from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { Problem } from './components/Problem';
 import { Services } from './components/Services';
-import { Projects } from './components/Projects';
+import { Process } from './components/Process';
 import { DesignLab } from './components/DesignLab';
 import { Contact } from './components/Contact';
 import { LanguageToggle } from './components/LanguageToggle';
@@ -18,8 +19,9 @@ const App: React.FC = () => {
         <Navbar />
         <main>
           <Hero />
+          <Problem />
           <Services />
-          <Projects />
+          <Process />
           <DesignLab />
           <Contact />
         </main>

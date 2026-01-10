@@ -5,7 +5,6 @@ import { Logo } from './Logo';
 
 const navLinksConfig = [
   { key: 'nav.services', href: '#services' },
-  { key: 'nav.projects', href: '#work' },
   { key: 'nav.designLab', href: '#design-lab' },
   { key: 'nav.contact', href: '#contact' },
 ];

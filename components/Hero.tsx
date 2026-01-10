@@ -28,47 +28,39 @@ export const Hero: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto w-full z-10">
         <Reveal>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-accent/10 border border-slate-accent/20 mb-6">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-slate-accent text-sm font-medium tracking-wide">{t('hero.badge')}</span>
-          </div>
-        </Reveal>
-        
-        <Reveal delay={0.1}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] mb-8 text-neutral-900 dark:text-white transition-colors duration-300">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-neutral-900 dark:text-white transition-colors duration-300">
             {t('hero.title1')} <br />
-            <span className="bg-gradient-to-r from-slate-accent via-steel-light to-accent bg-clip-text text-transparent">&</span> {t('hero.title2')} <br />
-            <span className="text-neutral-400 dark:text-neutral-500 transition-colors duration-300">{t('hero.title3')}</span>
+            <span className="bg-gradient-to-r from-slate-accent via-steel-light to-accent bg-clip-text text-transparent">{t('hero.title2')}</span> <br />
+            <span className="text-neutral-500 dark:text-neutral-600 transition-colors duration-300">{t('hero.title3')}</span>
           </h1>
         </Reveal>
 
-        <Reveal delay={0.2}>
+        <Reveal delay={0.1}>
           <p className="max-w-2xl text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed mb-10 transition-colors duration-300">
             {t('hero.description')}
           </p>
         </Reveal>
 
-        <Reveal delay={0.3}>
+        <Reveal delay={0.2}>
           <div className="flex flex-wrap gap-4">
             <a 
               href="#contact"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-neutral-900 font-semibold rounded-full hover:bg-accent hover:text-white transition-all duration-300 shadow-lg shadow-white/10"
+              className="group inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-bold rounded-lg hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-all duration-300 shadow-xl"
             >
               {t('hero.cta.primary')}
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
               href="#design-lab"
-              className="group inline-flex items-center gap-3 px-8 py-4 border border-neutral-300 dark:border-slate-accent/40 text-neutral-900 dark:text-white font-medium rounded-full hover:bg-neutral-100 dark:hover:bg-slate-accent/10 hover:border-neutral-400 dark:hover:border-slate-accent transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-5 border-2 border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-white font-semibold rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300"
             >
-              <Sparkles size={18} className="text-accent dark:text-slate-accent" />
               {t('hero.cta.secondary')}
             </a>
           </div>
         </Reveal>
 
         {/* Stats row */}
-        <Reveal delay={0.4}>
+        <Reveal delay={0.3}>
           <div className="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap gap-12 transition-colors duration-300">
             <div>
               <p className="text-3xl font-bold text-neutral-900 dark:text-white">50+</p>
