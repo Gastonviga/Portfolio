@@ -36,7 +36,7 @@ export const OdontologiaDemo: React.FC = () => {
     <section className="py-24 bg-white dark:bg-neutral-900 transition-colors duration-300">
       <div className="w-full mx-auto px-6">
         <Reveal>
-          <div className="text-center mb-16" style={{ marginLeft: '490px' }}>
+          <div className="text-center mb-16 ml-0 md:ml-[490px]">
             <h3 className="text-sm font-bold text-cyan-600 dark:text-cyan-400 tracking-widest uppercase mb-3">
               {t('odonto.demo.label')}
             </h3>
@@ -49,11 +49,11 @@ export const OdontologiaDemo: React.FC = () => {
           </div>
         </Reveal>
 
+        {/* Desktop: Card con márgenes */}
         <Reveal delay={0.1}>
-          <div className="relative w-full" style={{ maxWidth: '1600px', marginLeft: '430px' }}>
-            {/* Desktop: Hover to play */}
+          <div className="hidden md:block relative w-full max-w-[1600px] ml-[430px]">
             <div 
-              className="hidden md:block relative rounded-2xl overflow-hidden border-2 border-cyan-100 dark:border-cyan-900 shadow-2xl shadow-cyan-500/10 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-950/30 dark:to-teal-950/30 cursor-pointer group"
+              className="relative rounded-2xl overflow-hidden border-2 border-cyan-100 dark:border-cyan-900 shadow-2xl shadow-cyan-500/10 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-950/30 dark:to-teal-950/30 cursor-pointer group"
               style={{ aspectRatio: '16/9', width: '100%', height: 'auto' }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -91,9 +91,17 @@ export const OdontologiaDemo: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            {/* Mobile: Button to view */}
-            <div className="md:hidden relative aspect-video rounded-2xl overflow-hidden border-2 border-cyan-100 dark:border-cyan-900 shadow-2xl shadow-cyan-500/10 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-950/30 dark:to-teal-950/30">
-              {/* Placeholder Image */}
+            {/* Subtle hint text */}
+            <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mt-6">
+              Hover sobre la imagen para ver la preview en acción
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Mobile: Card sin márgenes */}
+        <Reveal delay={0.1} width="100%">
+          <div className="block md:hidden relative w-full">
+            <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-cyan-100 dark:border-cyan-900 shadow-2xl shadow-cyan-500/10 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-950/30 dark:to-teal-950/30">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center shadow-xl">
@@ -108,11 +116,6 @@ export const OdontologiaDemo: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Subtle hint text */}
-            <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mt-6 hidden md:block">
-              Hover sobre la imagen para ver la preview en acción
-            </p>
           </div>
         </Reveal>
       </div>

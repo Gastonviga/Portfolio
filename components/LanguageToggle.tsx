@@ -64,7 +64,7 @@ export const LanguageToggle: React.FC = () => {
         aria-label="Toggle language"
       >
         <Globe size={20} className="text-neutral-700 dark:text-slate-accent group-hover:text-accent dark:group-hover:text-white transition-colors" />
-        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-900 dark:bg-white rounded text-xs text-white dark:text-neutral-900 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 px-2 py-1 bg-neutral-900 dark:bg-white rounded text-xs text-white dark:text-neutral-900 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           {language === 'en' ? 'ES' : 'EN'}
         </span>
       </button>
