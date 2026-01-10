@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from './Reveal';
 import { Eye, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface DesignProject {
   id: number;
@@ -16,48 +17,48 @@ interface DesignProject {
 const designProjects: DesignProject[] = [
   {
     id: 1,
-    title: "Nexus Security",
-    category: "Cybersecurity / Sci-Fi",
-    description: "Terminal-style interface with glitch effects and real-time threat maps.",
-    imageUrl: "/imagenes/nexus.png",
-    videoUrl: "/videos/nexus.mp4",
-    colorClasses: "border-green-500 shadow-green-900/20"
+    title: "Viga & Assoc",
+    category: "Legal / Corporate",
+    description: "Identidad minimalista con tipografía serif diseñada para transmitir autoridad y elegancia profesional.",
+    imageUrl: "/imagenes/viga-preview.png",
+    videoUrl: "/videos/viga-concept.mp4",
+    colorClasses: "border-slate-400/50 shadow-slate-700/20"
   },
   {
     id: 2,
-    title: "Apex Motors",
-    category: "Automotive / Video-First",
-    description: "Immersive landing page featuring full-screen video backgrounds and motion telemetry.",
-    imageUrl: "/imagenes/apex-motors.png",
-    videoUrl: "/videos/apex-motors.mp4",
-    colorClasses: "border-red-600 shadow-red-900/20"
+    title: "Nexus Security",
+    category: "Cybersecurity / Sci-Fi",
+    description: "Interfaz estilo terminal con efectos glitch y mapas de amenazas en tiempo real.",
+    imageUrl: "/imagenes/nexus.png",
+    videoUrl: "/videos/nexus.mp4",
+    colorClasses: "border-green-500/50 shadow-green-900/20"
   },
   {
     id: 3,
-    title: "AURA | Living Objects",
-    category: "E-Commerce / Neo-Brutalist",
-    description: "Vibrant shopping experience focusing on micro-interactions and bold typography.",
-    imageUrl: "/imagenes/vivid-commerce.png",
-    videoUrl: "/videos/vivid-commerce.mp4",
-    colorClasses: "border-orange-500 shadow-orange-900/20"
+    title: "Apex Motors",
+    category: "Automotive / Dark",
+    description: "Landing inmersiva con fondos de video a pantalla completa y telemetría en movimiento.",
+    imageUrl: "/imagenes/apex-motors.png",
+    videoUrl: "/videos/apex-motors.mp4",
+    colorClasses: "border-red-600/50 shadow-red-900/20"
   },
   {
     id: 4,
-    title: "NovaPay",
-    category: "Fintech / SaaS",
-    description: "Clean, dark-mode financial interface optimized for conversion and trust.",
-    imageUrl: "/imagenes/novapay-preview.png",
-    videoUrl: "/videos/novapay-concept.mp4",
-    colorClasses: "border-violet-500 shadow-violet-900/20"
+    title: "Vivid Commerce",
+    category: "E-Commerce / Neo-Brutalist",
+    description: "Experiencia de compra vibrante con micro-interacciones y tipografía audaz.",
+    imageUrl: "/imagenes/vivid-commerce.png",
+    videoUrl: "/videos/vivid-commerce.mp4",
+    colorClasses: "border-orange-500/50 shadow-orange-900/20"
   },
   {
     id: 5,
-    title: "Viga & Associates",
-    category: "Legal / Corporate",
-    description: "Minimalist, serif-based identity designed to convey authority and elegance.",
-    imageUrl: "/imagenes/viga-preview.png",
-    videoUrl: "/videos/viga-concept.mp4",
-    colorClasses: "border-slate-400 shadow-slate-700/20"
+    title: "Landing App",
+    category: "SaaS / Mobile First",
+    description: "Landing moderna para aplicación móvil con animaciones fluidas y diseño centrado en conversión.",
+    imageUrl: "/imagenes/landing-app.png",
+    videoUrl: "/videos/landing-app.mp4",
+    colorClasses: "border-violet-500/50 shadow-violet-900/20"
   }
 ];
 
@@ -136,10 +137,13 @@ const VideoModal: React.FC<VideoModalProps> = ({ videoUrl, isOpen, onClose }) =>
 interface DesignCardProps {
   project: DesignProject;
   height: string;
+  minHeight?: string;
+  featured?: boolean;
   onOpenModal: (videoUrl: string) => void;
 }
 
-const DesignCard: React.FC<DesignCardProps> = ({ project, height, onOpenModal }) => {
+const DesignCard: React.FC<DesignCardProps> = ({ project, height, minHeight, featured, onOpenModal }) => {
+  const { t } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleViewConcept = () => {
@@ -148,8 +152,8 @@ const DesignCard: React.FC<DesignCardProps> = ({ project, height, onOpenModal })
 
   return (
     <div
-      className={`group relative w-full overflow-hidden rounded-xl bg-neutral-900 border-2 transition-all duration-500 hover:scale-105 ${project.colorClasses}`}
-      style={{ height }}
+      className={`group relative w-full overflow-hidden rounded-2xl border transition-all duration-500 spotlight-card ${project.colorClasses} ${featured ? 'h-full' : ''}`}
+      style={{ height: featured ? undefined : height, minHeight: minHeight || (featured ? '580px' : undefined) }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -190,7 +194,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ project, height, onOpenModal })
             onClick={handleViewConcept}
           >
             <Eye size={16} />
-            View Concept
+            {t('designLab.viewConcept')}
           </motion.button>
         </div>
       </div>
@@ -199,6 +203,7 @@ const DesignCard: React.FC<DesignCardProps> = ({ project, height, onOpenModal })
 };
 
 export const DesignLab: React.FC = () => {
+  const { t } = useLanguage();
   const [modalVideoUrl, setModalVideoUrl] = useState<string | null>(null);
 
   const handleOpenModal = (videoUrl: string) => {
@@ -211,47 +216,53 @@ export const DesignLab: React.FC = () => {
 
   return (
     <>
-      <section id="design-lab" className="py-24 bg-neutral-950 transition-colors duration-300">
+      <section id="design-lab" className="py-24 bg-white dark:bg-neutral-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal>
             <div className="mb-16">
-              <h3 className="text-sm font-bold text-neutral-500 tracking-widest uppercase mb-2">
-                UI/UX Experiments
+              <h3 className="text-sm font-bold text-accent dark:text-slate-accent tracking-widest uppercase mb-2">
+                {t('designLab.label')}
               </h3>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
-                Design Lab
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                {t('designLab.title')}
               </h2>
-              <p className="text-neutral-400 mt-4 max-w-2xl">
-                A collection of landing page concepts exploring different visual styles and interaction patterns.
+              <p className="text-neutral-600 dark:text-neutral-400 mt-4 max-w-2xl">
+                {t('designLab.description')}
               </p>
             </div>
           </Reveal>
 
           {/* Bento Grid - Asymmetric Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* First Row - 2 Large Cards */}
+            {/* Featured Card - Viga & Assoc (Large) */}
             <div className="md:col-span-1 lg:col-span-2">
               <Reveal width="100%">
-                <DesignCard project={designProjects[0]} height="400px" onOpenModal={handleOpenModal} />
+                <DesignCard project={designProjects[0]} height="350px" minHeight="350px" onOpenModal={handleOpenModal} featured />
               </Reveal>
             </div>
+            
+            {/* Nexus Security */}
             <div className="md:col-span-1">
               <Reveal width="100%" delay={0.1}>
-                <DesignCard project={designProjects[1]} height="400px" onOpenModal={handleOpenModal} />
+                <DesignCard project={designProjects[1]} height="350px" onOpenModal={handleOpenModal} />
               </Reveal>
             </div>
 
-            {/* Second Row - 3 Smaller Cards */}
+            {/* Apex Motors */}
             <div className="md:col-span-1">
               <Reveal width="100%" delay={0.2}>
                 <DesignCard project={designProjects[2]} height="350px" onOpenModal={handleOpenModal} />
               </Reveal>
             </div>
+
+            {/* Vivid Commerce */}
             <div className="md:col-span-1">
               <Reveal width="100%" delay={0.3}>
                 <DesignCard project={designProjects[3]} height="350px" onOpenModal={handleOpenModal} />
               </Reveal>
             </div>
+
+            {/* Landing App */}
             <div className="md:col-span-1">
               <Reveal width="100%" delay={0.4}>
                 <DesignCard project={designProjects[4]} height="350px" onOpenModal={handleOpenModal} />

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Reveal } from './Reveal';
 import { ProjectItem } from '../types';
 import { ArrowUpRight, Play, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const projects: ProjectItem[] = [
   {
@@ -226,6 +227,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ videoUrl, isOpen, onClose }) =>
 };
 
 export const Projects: React.FC = () => {
+  const { t } = useLanguage();
   const [modalVideoUrl, setModalVideoUrl] = useState<string | null>(null);
 
   const handleOpenModal = (videoUrl: string) => {
@@ -238,12 +240,12 @@ export const Projects: React.FC = () => {
 
   return (
     <>
-      <section id="work" className="py-24 bg-white dark:bg-neutral-900 transition-colors duration-300">
+      <section id="work" className="py-24 bg-neutral-50 dark:bg-neutral-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <Reveal>
             <div className="mb-16">
-              <h3 className="text-sm font-bold text-neutral-400 dark:text-neutral-500 tracking-widest uppercase mb-2">Selected Works</h3>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">Featured Projects</h2>
+              <h3 className="text-sm font-bold text-accent dark:text-slate-accent tracking-widest uppercase mb-2">{t('projects.label')}</h3>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">{t('projects.title')}</h2>
             </div>
           </Reveal>
 

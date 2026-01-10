@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { Logo } from './Logo';
 
-const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Work', href: '#work' },
-  { name: 'Contact', href: '#contact' },
-  { name: 'Resume', href: '/cv.pdf' },
+const navLinksConfig = [
+  { key: 'nav.services', href: '#services' },
+  { key: 'nav.projects', href: '#work' },
+  { key: 'nav.designLab', href: '#design-lab' },
+  { key: 'nav.contact', href: '#contact' },
 ];
 
 export const Navbar: React.FC = () => {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -31,7 +33,7 @@ export const Navbar: React.FC = () => {
       const scrollPosition = scrollY + 150; 
 
       let current = '';
-      for (const link of navLinks) {
+      for (const link of navLinksConfig) {
         const sectionId = link.href.substring(1);
         const element = document.getElementById(sectionId);
         
@@ -45,7 +47,7 @@ export const Navbar: React.FC = () => {
       
       // Edge case: if at bottom of page, highlight Contact (or last item)
       if ((window.innerHeight + Math.round(scrollY)) >= document.body.offsetHeight) {
-         current = navLinks[navLinks.length - 1].href;
+         current = navLinksConfig[navLinksConfig.length - 1].href;
       }
       
       setActiveSection(current);
@@ -120,7 +122,7 @@ export const Navbar: React.FC = () => {
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 py-4' 
+          ? 'bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 py-2' 
           : 'bg-transparent py-6'
       }`}
     >
@@ -128,16 +130,17 @@ export const Navbar: React.FC = () => {
         <a 
           href="#" 
           onClick={(e) => handleNavClick(e, '#')}
-          className="text-2xl font-bold tracking-tighter hover:text-accent transition-colors text-neutral-900 dark:text-white"
+          className="transition-transform duration-300 hover:scale-95 origin-left flex items-center justify-center"
+          aria-label="Viga Studio Home"
         >
-          EMA.<span className="text-accent">DEV</span>
+          <Logo size="md" />
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
+          {navLinksConfig.map((link) => (
             <a
-              key={link.name}
+              key={link.key}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`text-sm font-medium transition-colors duration-300 ${
@@ -146,7 +149,7 @@ export const Navbar: React.FC = () => {
                   : 'text-neutral-600 dark:text-neutral-300 hover:text-accent dark:hover:text-accent'
               }`}
             >
-              {link.name}
+              {t(link.key)}
             </a>
           ))}
           
@@ -180,9 +183,9 @@ export const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 p-6 md:hidden flex flex-col space-y-4 shadow-xl">
-          {navLinks.map((link) => (
+          {navLinksConfig.map((link) => (
             <a
-              key={link.name}
+              key={link.key}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`text-lg font-medium transition-colors ${
@@ -191,7 +194,7 @@ export const Navbar: React.FC = () => {
                   : 'text-neutral-800 dark:text-neutral-100'
               }`}
             >
-              {link.name}
+              {t(link.key)}
             </a>
           ))}
         </div>
