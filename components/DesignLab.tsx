@@ -20,7 +20,7 @@ const designProjects: DesignProject[] = [
     title: "Viga & Assoc",
     category: "Legal / Corporate",
     description: "Identidad minimalista con tipografía serif diseñada para transmitir autoridad y elegancia profesional.",
-    imageUrl: "/imagenes/estudiojuridico.png",
+    imageUrl: "/imagenes/estudiojuridico.webp",
     videoUrl: "/videos/estudiojuridico.mp4",
     colorClasses: "border-slate-400/50 shadow-slate-700/20"
   },
@@ -29,7 +29,7 @@ const designProjects: DesignProject[] = [
     title: "Nexus Security",
     category: "Cybersecurity / Sci-Fi",
     description: "Interfaz estilo terminal con efectos glitch y mapas de amenazas en tiempo real.",
-    imageUrl: "/imagenes/nexus.png",
+    imageUrl: "/imagenes/nexus.webp",
     videoUrl: "/videos/nexus.mp4",
     colorClasses: "border-green-500/50 shadow-green-900/20"
   },
@@ -38,7 +38,7 @@ const designProjects: DesignProject[] = [
     title: "Apex Motors",
     category: "Automotive / Dark",
     description: "Landing inmersiva con fondos de video a pantalla completa y telemetría en movimiento.",
-    imageUrl: "/imagenes/apex-motors.png",
+    imageUrl: "/imagenes/apex-motors.webp",
     videoUrl: "/videos/apex-motors.mp4",
     colorClasses: "border-red-600/50 shadow-red-900/20"
   },
@@ -47,7 +47,7 @@ const designProjects: DesignProject[] = [
     title: "Vivid Commerce",
     category: "E-Commerce / Neo-Brutalist",
     description: "Experiencia de compra vibrante con micro-interacciones y tipografía audaz.",
-    imageUrl: "/imagenes/vivid-commerce.png",
+    imageUrl: "/imagenes/vivid-commerce.webp",
     videoUrl: "/videos/vivid-commerce.mp4",
     colorClasses: "border-orange-500/50 shadow-orange-900/20"
   },
@@ -56,7 +56,7 @@ const designProjects: DesignProject[] = [
     title: "Landing App",
     category: "SaaS / Mobile First",
     description: "Landing moderna para aplicación móvil con animaciones fluidas y diseño centrado en conversión.",
-    imageUrl: "/imagenes/landingapp.png",
+    imageUrl: "/imagenes/landingapp.webp",
     videoUrl: "/videos/landingapp.mp4",
     colorClasses: "border-violet-500/50 shadow-violet-900/20"
   }
