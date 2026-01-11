@@ -20,8 +20,8 @@ const designProjects: DesignProject[] = [
     title: "Viga & Assoc",
     category: "Legal / Corporate",
     description: "Identidad minimalista con tipografía serif diseñada para transmitir autoridad y elegancia profesional.",
-    imageUrl: "/imagenes/viga-preview.png",
-    videoUrl: "/videos/viga-concept.mp4",
+    imageUrl: "/imagenes/estudiojuridico.png",
+    videoUrl: "/videos/estudiojuridico.mp4",
     colorClasses: "border-slate-400/50 shadow-slate-700/20"
   },
   {
@@ -56,8 +56,8 @@ const designProjects: DesignProject[] = [
     title: "Landing App",
     category: "SaaS / Mobile First",
     description: "Landing moderna para aplicación móvil con animaciones fluidas y diseño centrado en conversión.",
-    imageUrl: "/imagenes/landing-app.png",
-    videoUrl: "/videos/landing-app.mp4",
+    imageUrl: "/imagenes/landingapp.png",
+    videoUrl: "/videos/landingapp.mp4",
     colorClasses: "border-violet-500/50 shadow-violet-900/20"
   }
 ];
