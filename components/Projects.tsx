@@ -28,7 +28,7 @@ const projects: ProjectItem[] = [
     title: "Retail AI Agent",
     category: "AI / Computer Vision / Retail",
     description: "Intelligent retail assistant powered by computer vision and NLP. Automates inventory management, customer analytics, and personalized recommendations in real-time.",
-    imageUrl: "imagenes/Retail.png",
+    imageUrl: "/imagenes/Retail.png",
     size: "small",
     videoUrl: "/videos/retail-agent-demo.mp4"
   },
